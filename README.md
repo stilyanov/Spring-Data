@@ -1,2 +1,2 @@
 # Spring-Data
-SoftUni Spring Data - February 2024 tasks
+Here are the tasks from the course Spring Data - February 2024 at SoftUni.
