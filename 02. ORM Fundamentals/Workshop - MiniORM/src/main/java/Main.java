@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class Main {
 
     public static void main(String[] args) throws SQLException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, InstantiationException {
-        MyConnector.createConnection("root", "12345", "mini_orm");
+        MyConnector.createConnection("", "", "mini_orm"); // user , password, url
         Connection connection = MyConnector.getConnection();
 
         EntityManager<User> userEntityManager = new EntityManager<>(connection);
