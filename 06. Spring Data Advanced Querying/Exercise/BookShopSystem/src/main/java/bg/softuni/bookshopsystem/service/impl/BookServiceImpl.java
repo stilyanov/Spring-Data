@@ -166,5 +166,20 @@ public class BookServiceImpl implements BookService {
         return this.bookRepository.findByTitle(title);
     }
 
+    @Override
+    public int updateCopiesOfAllBooksByGivenCopiesAfterGivenDate(LocalDate date, int copies) {
+        return this.bookRepository.updateAllByCopiesRAndReleaseDateBefore(date, copies);
+    }
+
+    @Override
+    public int removeBooksCopiesLessThanGivenNumber(int number) {
+        return this.bookRepository.removeAllByCopiesLessThan(number);
+    }
+
+    @Override
+    public int callStoredProcedureWithAuthorFirstAndLastName(String firstName, String lastName) {
+        return this.bookRepository.findAllByAuthorFirstNameAndAuthorLastName(firstName, lastName);
+    }
+
 
 }

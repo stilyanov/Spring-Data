@@ -6,6 +6,7 @@ import bg.softuni.bookshopsystem.data.repositories.BookInfo;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 
 public interface BookService {
@@ -34,4 +35,10 @@ public interface BookService {
     int countAllCopiesInBooksByAuthorsFirstNameAndLastName(String firstName, String lastName);
 
     BookInfo findInfoByTitle(String title);
+
+    int updateCopiesOfAllBooksByGivenCopiesAfterGivenDate(LocalDate date, int copies);
+
+    int removeBooksCopiesLessThanGivenNumber(int number);
+
+    int callStoredProcedureWithAuthorFirstAndLastName(String firstName, String lastName);
 }
