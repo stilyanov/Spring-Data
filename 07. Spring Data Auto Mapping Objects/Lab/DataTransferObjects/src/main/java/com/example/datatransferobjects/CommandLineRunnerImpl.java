@@ -50,5 +50,8 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
         EmployeeDTO employeeKirilycDTO = mapper.map(kirilyc, EmployeeDTO.class);
         ManagerDTO managerDTO = mapper.map(manager, ManagerDTO.class);
 
+        this.employeeService.seedData(manager);
+        this.employeeService.seedData(stephen);
+        this.employeeService.seedData(kirilyc);
     }
 }
