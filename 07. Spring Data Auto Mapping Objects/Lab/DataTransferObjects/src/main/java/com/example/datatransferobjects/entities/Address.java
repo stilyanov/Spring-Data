@@ -13,9 +13,9 @@ public class Address extends BaseEntity {
     public Address() {
     }
 
-    public Address(String city, String street) {
+    public Address(String city, String country) {
         this.city = city;
-        this.country = street;
+        this.country = country;
     }
 
     public String getCity() {
@@ -30,7 +30,7 @@ public class Address extends BaseEntity {
         return country;
     }
 
-    public void setCountry(String street) {
-        this.country = street;
+    public void setCountry(String country) {
+        this.country = country;
     }
 }
